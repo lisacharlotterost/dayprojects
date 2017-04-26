@@ -23,6 +23,10 @@ cospi(x)
 sinpi(x)
 tanpi(x)
 
+# OPTIONS
+# =======
+par(mar = rep(0, 4), xpd = NA)
+
 
 # BEST
 # =======
