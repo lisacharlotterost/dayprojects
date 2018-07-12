@@ -1,8 +1,9 @@
 # GENERATE NUMBERS
 # ================
-x = seq(-100,100,0.01)
-y = seq(-10,10,0.0001)
+x <- seq(-100,100,0.01)
+y <- seq(-10,10,0.0001)
 
+x <- as.data.frame(x)
 
 # FUNCTIONS
 # =========
@@ -22,6 +23,10 @@ atan(x)
 cospi(x)
 sinpi(x)
 tanpi(x)
+
+library(ggplot2)
+ggplot(x,aes(sin(x),x)) + geom_point(aes(colour = factor(x))) + theme_bw()
+
 
 # OPTIONS
 # =======
@@ -188,6 +193,8 @@ plot(sinpi(abs(y*2*abs(y))),cospi(sinpi(y/4))*sinpi(y*100), cex = 0.1)
 plot(sinpi(cos(y*2*abs(y))),cospi(sinpi(y))*cos(y*20), cex = 0.1)
 plot(sinpi(cos(y*2)),cospi(sinpi(y))*cos(y*20), cex = 0.1)
 plot(sinpi(cos(y*2)),sinpi(sinpi(y))*cos(y*200), cex = 0.1)
+plot(cospi(x*abs(tan(x)))*cos(x),sin(x), cex = 0.1)
+
 plot(sinpi(cos(y*20)),sinpi(sinpi(y))*cos(y*100), cex = 0.1)
 plot(sinpi(cos(y*20)*2),sinpi(sinpi(y))*cos(y*100), cex = 0.1)
 plot(sinpi(cos(y*20)*2),sinpi(sinpi(y))/y*cos(y*100), cex = 0.1)
@@ -239,6 +246,17 @@ plot(acos(asin(y/20)*y/8*y*sin(y*1000)),acos(sin(y/2*sinpi(y*2000)))*sinpi(y*500
 plot(acos(asin(y/20)*y*8*y*sin(y*1000)),acos(sin(y/2*sinpi(y*2000)))*sinpi(y*5000), cex = 0.1)
 plot(acos(asin(y/40)*y*8*y*sin(y*1000)),acos(sin(y/4*sinpi(y*2000)))*sinpi(y*5000), cex = 0.1)
 plot(acos(asin(y/4)*sin(y*1000)),acos(sinpi(y/5*sinpi(y*y)))*sinpi(y*5000), cex = 0.1)
+plot(sin(y/5),cos(y/50))
+plot(sin(x*50),cos(x/100),cex = 0.1)
+plot(cos(x*100),cos(x*20), cex = 0.1)
+plot(cos(x*100*sin(x)),cos(x/20), cex = 0.1)
+plot(cos(x/100*sin(x*20)),cos(x/20)*sin(x/100), cex = 0.1)
+plot(cos(x*x/100*cos(x)),sin(x/20), cex = 0.1)
+plot(cos(sin(x)),sin(x/200)*cos(x), cex = 0.1)
+
+
+
+
 
 
 
